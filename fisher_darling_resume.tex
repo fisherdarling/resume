@@ -44,9 +44,9 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[1]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    {#1 \vspace{-2pt}}
   }
 }
 
@@ -55,7 +55,30 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\educationSubheading}[5]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      #5 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\awardSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small #1 & \small #2 \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\projectSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small #1 & \small #2 \\
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -64,6 +87,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -71,7 +95,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-10pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -81,106 +105,137 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-  \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+  & (720)-227-7014 \\
+  \textbf{\Large Fisher Darling}  & \href{mailto:fdarling@mines.edu}{fdarling@mines.edu} \\
+  \href{https://github.com/fisherdarling}{github.com/fisherdarling}  & \href{https://linkedin.com/in/fisherdarling}{linkedin.com/in/fisherdarling} \\
 \end{tabular*}
-
+\vspace{-12pt}
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug. 2012 -- Dec. 2013}
-    \resumeSubheading
-      {Birla Institute of Technology and Science}{Pilani, India}
-      {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
-  \resumeSubHeadingListEnd
-
+%  \resumeSubHeadingListStart
+\educationSubheading
+  {Colorado School of Mines}{Golden, CO}
+  {B.S. Computer Science;  GPA: 3.45}{Expected May 2021}
+  {\small \textbf{Coursework}: Data Structures, Algorithims, Operating Systems, Compilers}
+%  \resumeSubHeadingListEnd
+\vspace{-3pt} % Reduce section spacing
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
+	%--------Verizon (ProtectWise)--------
     \resumeSubheading
-      {Google}{Mountain View, CA}
-      {Software Engineer}{Oct 2016 - Present}
+      {Verizon (ProtectWise)}{Denver, CO}
+      {Sofware Engineering Intern}{Aug 2019 -- Present}
       \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+        \resumeItem
+          {Writing fully asynchronous and multi-threaded software for analyzing and capturing network packets to build the next generation of Intrusion Detection Systems.}
+        \resumeItem
+          {Implementing system metrics for analyzing the health of deployed software to bring more value to clients.}
+        \resumeItem{Developing open source code that expands the Rust ecosystem.}
+        \resumeItem{Participating in weekly Agile standups and groomings.}
       \resumeItemListEnd
-      
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
+      	
+	%--------ProtectWise--------
     \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
+      {ProtectWise}{Denver, CO}
+      {Product Engineering Intern}{Oct 2018 -- May 2019}
       \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
+        \resumeItem
+          {Trained team members in the Rust Programming language. This included pair programming with senior engineers in order to teach them Rust paradigms and researching libraries needed for our product.}
+        \resumeItem
+          {Implemented a multi-threaded, asynchronous packet capturing library using AF\_PACKET C bindings. These bindings were then used in production code to act as input for our packet analysis engine.}
+        \resumeItem
+          {Created tooling for debugging local instances of production code.}
       \resumeItemListEnd
-
+  %--------Mines---------
     \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
+      {Colorado School of Mines}{Denver, CO}
+      {Secure Robotic Systems Research Assistant}{Aug 2018 -- May 2019}
       \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
+        \resumeItem
+          {Presented on different adversarial machine learning attack methods, such as FGSM and JSMA}
+        \resumeItem
+          {Documenting and taking minutes for the secure robotics systems research group meetings.}
+        \resumeItem
+          {Read and summarized research papers in Adversarial ML.}
       \resumeItemListEnd
-
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-      \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-      \resumeItemListEnd
-
   \resumeSubHeadingListEnd
+\vspace{-15pt} % Reduce section spacing
 
 
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+      \projectSubheading
+        {WABI -- WebAssembly Binary Interpreter}{\footnotesize Rust}
+        \resumeItemListStart
+          \resumeItem
+            {Developed a WebAssembly virtual machine and runtime true to the WebAssembly v1.0 specification.}
+          \resumeItem
+            {The purpose of this project is to learn more about virtual machines and their architectures.}
+        \resumeItemListEnd
+      \projectSubheading
+      {Cloud VPN Infrastructure}{\footnotesize Rust, Docker, Microservices}
+      \resumeItemListStart
+        \resumeItem
+          {Constructed a microservice infrastructure that dynamically creates secure VPNs on the Digital Ocean Cloud.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt} % Reduce section spacing
+
+
+
+\section{Activities \& Awards}
+  \resumeSubHeadingListStart
+    \awardSubheading
+      {\textit{1st Place}, \textbf{Facebook Global Hackathon}}{2018}
+      \resumeItemListStart
+        \resumeItem
+          {\textbf{HypAR Maps}: A completely offline Indoor Navigation System using ARCore and Kotlin}
+        \resumeItem
+          {Wrote the system for determining an image’s transformation matrix.}
+      \resumeItemListEnd
+    \awardSubheading
+      {\textit{2nd Place}, \textbf{HackUTD}}{UoT@Dallas, 2019}
+      \resumeItemListStart
+        \resumeItem
+          {\textbf{HealthCair}: Travel application that combines travel with cheap, overseas medical operations.}
+        \resumeItem
+          {Created an API that our backend queries for healthcare / operation data}
+      \resumeItemListEnd
+    \awardSubheading
+      {\textit{2nd Place}, \textbf{CyberPatriot IX National Finals}}{2017}
+      \resumeItemListStart
+        \resumeItem
+          {Used Linux system hardening and networking skills to remove security vulnerabilities in user systems and servers.}
+      \resumeItemListEnd
+    \awardSubheading
+    {\textit{Founder and President} of \textbf{OreSec} -- Mines CyberSecurity Club}{2019}
+    \resumeItemListStart
+      \resumeItem
+        {Hosting and leading weekly meetings on CyberSecurity topics}
+      \resumeItem
+        {Gave presentations on Web Exploitation, Cryptography and Binary Exploitation}
+      \resumeItem
+        {Grew membership to over 40 members}
+    \resumeItemListEnd
   \resumeSubHeadingListEnd
+\vspace{-15pt} % Reduce section spacing  
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Rust, Python, C, Java, C++}
+      \hfill
+      \textbf{Technologies}{: Git, Unix/Linux, Docker, AWS}
+    }
+    \vspace{-10pt}
+    
+  \resumeSubHeadingListEnd
+
 
 %
 %--------PROGRAMMING SKILLS------------
